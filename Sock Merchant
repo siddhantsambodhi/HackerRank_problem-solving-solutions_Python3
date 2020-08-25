@@ -1,0 +1,16 @@
+# Sock Merchant
+n=int(input())
+lst=list(map(int,input().split(" ")))
+non_repeat=list(dict.fromkeys(lst))
+total=0
+for i in non_repeat:
+    count_a=lst.count(i)//2
+    total+=count_a
+print(total)
+
+
+num=int(input())
+lst=list(map(int,input().split(" ")))
+
+res=lst.count(0)-1
+print(res)
