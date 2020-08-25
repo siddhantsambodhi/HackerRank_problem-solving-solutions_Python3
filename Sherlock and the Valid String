@@ -1,0 +1,15 @@
+#Sherlock and the Valid String
+st=input()
+count=[st.count(i) for i in set(st)]
+print(count)
+if max(count)-min(count)==0:
+    print("YES")
+elif count.count(max(count))==1 and max(count)-min(count)==1:
+    print("YES")
+elif count.count(min(count))==1:
+    count.remove(min(count))
+    if max(count)==min(count):
+        print("YES")
+    else:
+        print("NO")
+else:print("NO")
